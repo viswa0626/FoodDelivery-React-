@@ -1,5 +1,6 @@
 .head{
     background-image: url(./../../assets/a.png);
+    
     background-repeat: no-repeat;
     object-fit:scale-down;
     background-size:cover ;
@@ -10,7 +11,7 @@
     text-align:center;
     justify-content: center;
     color:wheat;
-    opacity: initial;
+    opacity: 0.9;
 }
 
 .register{
