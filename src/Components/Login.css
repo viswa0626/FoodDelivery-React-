@@ -6,11 +6,12 @@
 
 }
 .image{
-    width:50%;
+    width:90%;
     height:100%;
     background-image:url("./../../assets/img.jpg");
     background-repeat: no-repeat;
     object-fit: fill;
+    background-size:auto;
 
 
 
@@ -22,5 +23,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-style:italic;
+    color:white;
+    background-color:black;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    background-image: url(./../../assets/bg.jpg);
+    background-repeat: no-repeat;
 
+}
+.button{
+    position: relative;
+    margin-left: 34%;
 }
