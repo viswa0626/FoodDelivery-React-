@@ -1,9 +1,10 @@
 import React from 'react'
+import './Customerregistration.css';
 
 const Customerregistration = () => {
   return (
     <div className='register'>
-      <h1>UserRegistration</h1>
+      <div className='header'><h1>UserRegistration</h1></div>
       <form>
         <div>
           <label>FirstName</label>

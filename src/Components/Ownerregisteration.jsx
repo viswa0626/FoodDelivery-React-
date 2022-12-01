@@ -1,9 +1,10 @@
 import React from 'react'
+import './Ownerregisteration.css'
 
 const Userregisteration = () => {
     return (
-        <div>
-            <h1>REGISTER</h1>
+        <div className='head'>
+            <div className='name'><h1>REGISTER</h1></div>
             <p>Please fill this form to Create an Account</p>
             <form>
                 <div>
