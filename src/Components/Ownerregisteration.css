@@ -3,16 +3,82 @@
     background-repeat: no-repeat;
     object-fit:scale-down;
     background-size:cover ;
-    height:90vh;
+    height:100vh;
     width:100%;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align:center;
     justify-content: center;
-    color:aliceblue;
+    color:wheat;
+    opacity: initial;
+}
+
+.register{
+    width: 80%;
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    
 }
 .name{
     font-family:cursive;
     color:beige ;
+    padding: 0%;
+
+}
+p{
+    color: aquamarine;
+    
+}
+
+
+
+
+.text-field{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.input-text{
+    border: none;
+    height: 40px;
+    width: 200px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    
+}
+.size{
+    width: 80px;
+}
+
+.size-h{
+    height: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.label{
+    color: white;
+    font-size: 1.2rem;
+
+}
+.sized-box{
+    height: 10px;
+}
+.button{
+    background-color: bisque;
+    border: none;
+    text-decoration: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 
 }

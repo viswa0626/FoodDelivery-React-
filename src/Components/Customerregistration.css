@@ -16,3 +16,51 @@
     font-family:cursive;
     color:blueviolet ;
 }
+
+.text-field{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+
+.input-text{
+    border: none;
+    height: 40px;
+    width: 200px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    
+}
+.size{
+    width: 80px;
+}
+
+.size-h{
+    height: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.label{
+    color: white;
+    font-size: 1.2rem;
+
+}
+.sized-box{
+    height: 10px;
+}
+.button{
+    background-color: bisque;
+    border: none;
+    text-decoration: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+
+}

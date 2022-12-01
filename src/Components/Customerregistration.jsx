@@ -6,27 +6,27 @@ const Customerregistration = () => {
     <div className='register'>
       <div className='header'><h1>UserRegistration</h1></div>
       <form>
-        <div>
-          <label>FirstName</label>
-          <input type="text" placeholder='Enter FirstName' name='uname' required></input>
+        <div className='text-field'>
+          <label className='label'>FirstName</label>
+          <input className='input-text' type="text" placeholder='Enter FirstName' name='uname' required></input>
         </div>
-        <div>
+        <div className='text-field'>
 
-          <label>LastName</label>
-          <input type="text" placeholder='Enter LastName' name="uname" required></input>
+          <label className='label'>LastName</label>
+          <input className='input-text' type="text" placeholder='Enter LastName' name="uname" required></input>
         </div>
-        <div>
+        <div className='text-field'>
 
-          <label>EmailId</label>
-          <input type='email' placeholder="Enter EmailId" name="email" required></input>
+          <label className='label'>EmailId</label>
+          <input className='input-text' type='email' placeholder="Enter EmailId" name="email" required></input>
         </div>
-        <div>
+        <div className='text-field'>
 
-          <label>Phonenumber</label>
-          <input type="phonenumber" placeholder='Enter Phno' name="phno"></input>
+          <label className='label'>Phonenumber</label>
+          <input className='input-text' type="phonenumber" placeholder='Enter Phno' name="phno"></input>
         </div>
         <div>
-          <b><button>SignUp</button></b>
+          <b><button className='button'>SignUp</button></b>
         </div>
       </form>
 
