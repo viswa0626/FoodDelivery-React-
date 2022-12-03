@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     /* background-color: burlywood; */
-    background-image: url("./../../assets/a.png");
+    background-image: url(../../../assets/a.png);
     opacity: 0.8 ;
     
     /* background-repeat: no-repeat ; */
@@ -25,7 +25,7 @@
 .image {
     width: 90%;
     height: 100%;
-    background-image: url("./../../assets/img.jpg");
+    background-image: url(../../../assets/img.jpg);
     background-repeat: no-repeat;
     object-fit: fill;
     background-size: auto;

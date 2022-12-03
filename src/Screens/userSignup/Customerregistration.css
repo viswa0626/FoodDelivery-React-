@@ -1,46 +1,27 @@
-.head{
-    background-image: url(./../../assets/a.png);
-    
+.register{
+    background-image: url(../../../assets/C1.webp);
     background-repeat: no-repeat;
-    object-fit:scale-down;
+    object-fit: fill;
     background-size:cover ;
-    height:100vh;
+    height:90vh;
     width:100%;
     display: flex;
-    /* flex-direction: column; */
-    text-align:center;
-    justify-content: center;
-    color:wheat;
-    opacity: 0.9;
-}
-
-.register{
-    width: 80%;
-    /* height: 90%; */
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    /* justify-content: space-evenly; */
+    text-align:left;
+    justify-content: center;
+    color: azure;
     
 }
-.name{
+.header{
     font-family:cursive;
-    color:beige ;
-    padding: 0%;
-
+    color:blueviolet ;
 }
-p{
-    color: aquamarine;
-    
-}
-
-
-
 
 .text-field{
     display: flex;
     /* flex-direction: column; */
 }
+
 
 .input-text{
     border: none;

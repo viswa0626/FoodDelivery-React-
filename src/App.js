@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Login from './Components/Login';
+import Login from '../src/Screens/userLogin/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Userhome from './Screens/Userhome';
-import Ownerregisteration from './Components/Ownerregisteration'
-import Customerregisteration from './Components/Customerregistration';
+import Userhome from '../src/Screens/userHome/Userhome';
+import Ownerregisteration from '../src/Screens/adminSignup/Ownerregisteration'
+import Customerregisteration from '../src/Screens/userSignup/Customerregistration';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Userhome from '../Screens/Userhome'
+import Userhome from '../userHome/Userhome'
 import { Route, Link } from "react-router-dom";
 import Popup from 'reactjs-popup';
-import "./../Components/Login.css"
+import "./Login.css"
 
 
 const Login = () => {
