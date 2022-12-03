@@ -27,7 +27,8 @@ const Login = () => {
                         </div>
                         <div className='sized-box'></div>
                         <button className='button'>
-                            <Link to='/home'>Submit</Link>
+                            {/* <Link to='/home'>Submit</Link> */}
+                            <Link to='/admin'>Submit</Link>
                         </button>
 
                     </form>

@@ -1,0 +1,6 @@
+.admin-products {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+}

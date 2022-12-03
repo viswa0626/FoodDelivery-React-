@@ -1,0 +1,11 @@
+.admin {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+}
+
+.right {
+    width: max-content;
+    height: max-content;
+}

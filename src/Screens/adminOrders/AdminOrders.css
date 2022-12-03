@@ -1,0 +1,6 @@
+.admin-orders {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+}

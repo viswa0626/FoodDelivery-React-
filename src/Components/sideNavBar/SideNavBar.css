@@ -1,0 +1,25 @@
+.nav-bar{
+    background-color: var(--light);
+    height: 100%;
+    /* width: 150px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.top{
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    color: var(--primary);
+}
+.nav-list{
+    color: var(--primary)
+}
+.bottom{
+    color: var(--primary);
+}
