@@ -1,16 +1,47 @@
 .register{
-    background-image: url(../../../assets/C1.webp);
+    background-image: url(../../../assets/a.png);
     background-repeat: no-repeat;
     object-fit: fill;
     background-size:cover ;
-    height:90vh;
+    height:100vh;
     width:100%;
     display: flex;
     flex-direction: column;
     text-align:left;
     justify-content: center;
+    align-items: center;
     color: azure;
     
+}
+.re-card{
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.us_image {
+    width: 65%;
+    height: 100%;
+    background-image: url(../../../assets/img.jpg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-size: auto;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px;
+    opacity: 0.8;
+}
+
+.us_signup{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--black);
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    opacity: 0.8;
 }
 .header{
     font-family:cursive;
@@ -21,7 +52,12 @@
     display: flex;
     /* flex-direction: column; */
 }
-
+.usre-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 .input-text{
     border: none;

@@ -33,7 +33,7 @@ const SideNavBar = ({ sendIndex }) => {
     return (
         <div className='nav-bar'>
             <div className='top'>
-                <div className='logo'>Logo</div>
+                <div className='logo'>FOOD</div>
                 <div className='nav-list'>
                     <NavIcon onClick={() => {
                         setIndex(0)

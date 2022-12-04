@@ -6,7 +6,7 @@
     justify-content: center;
     /* background-color: burlywood; */
     background-image: url(../../../assets/a.png);
-    opacity: 0.8 ;
+    /* opacity: 0.8 ; */
     
     /* background-repeat: no-repeat ; */
     object-fit: contain;
@@ -18,8 +18,8 @@
     display: flex;
     flex-direction: row;
     background-color: black;
-    border-radius: 20px
-    
+    border-radius: 20px;
+    opacity: 0.8;
 }
 
 .image {
@@ -31,9 +31,11 @@
     background-size: auto;
     border-top-right-radius:20px ;
     border-bottom-right-radius:20px ;
+    opacity: 0.8;
 }
 
 .loginform {
+
     width: 50%;
     height: 100%;
     display: flex;

@@ -6,6 +6,23 @@ import "./Login.css"
 
 
 const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function onChangeEmail(a) {
+        setEmail(a);
+    }
+    function onChangePassword(a) {
+        setPassword(a)
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        console.log(email);
+        console.log(password);
+        setEmail("");
+        setPassword("");
+    }
 
     return (
         <div className='background'>
@@ -14,15 +31,14 @@ const Login = () => {
 
 
                 <div className='loginform'><h1>LogIn</h1>
-                    <form >
+                    <form onSubmit={submitForm}>
                         <div className='text-field'>
                             <label className='label'>UserName</label>
-                            <input className='input-text' type="text" placeholder="  Enter Username" name="uname" required></input>
+                            <input onChange={(a) => onChangeEmail(a.target.value)} value={email} className='input-text' type="text" placeholder="  Enter Username" name="uname" required></input>
                         </div>
                         <div className='text-field'>
-
                             <label className='label'>Password</label>
-                            <input className='input-text' type="text" placeholder="  Enter Password" name="psw" required></input>
+                            <input onChange={(a) => onChangePassword(a.target.value)} value={password} className='input-text' type="text" placeholder="  Enter Password" name="psw" required></input>
 
                         </div>
                         <div className='sized-box'></div>

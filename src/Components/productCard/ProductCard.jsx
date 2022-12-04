@@ -1,24 +1,24 @@
 import React from 'react';
 import './ProductCard.css'
 
-const ProductCard = () => {
+const ProductCard = (props) => {
     return (
         <div className='p-card'>
-            <img className='pro-image' src="https://media.istockphoto.com/id/996699224/photo/assorted-indian-food-for-lunch-or-dinner-rice-lentils-paneer-dal-makhani-naan-chutney-spices.jpg?s=612x612&w=is&k=20&c=Bjdls52hMQSG4x0RoAUcWqJSczDfQU0Gqp9Gya7xHNk=" />
+            <img className='pro-image' src={props.image} />
 
             <div className='pro-details'>
-                <p className='pr-title' >Title</p>
-                <p className='des'>description</p>
+                <p className='pr-title' >{props.title}</p>
+                <p className='des'>{props.des}</p>
                 <div className='qty-pr'>
                     <div>
 
                         <p className='qty'>quantity</p>
-                        <p className='qty'>10</p>
+                        <p className='qty'>{props.qty}</p>
                     </div>
                     <div>
 
                         <p className='price'>cost</p>
-                        <p className='price'>200</p>
+                        <p className='price'>{props.price}</p>
                     </div>
                 </div>
             </div>

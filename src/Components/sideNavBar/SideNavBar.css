@@ -16,6 +16,9 @@
 }
 .logo{
     color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .nav-list{
     color: var(--primary)
