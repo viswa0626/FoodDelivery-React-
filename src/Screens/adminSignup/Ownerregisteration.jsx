@@ -47,7 +47,7 @@ const Userregisteration = () => {
                 <div className='name'><h1>REGISTER</h1></div>
                 <p>Please fill this form to Create an Account</p>
                 <form onSubmit={onSubmitForm} className="b-form">
-                    <div className='form'>
+                    <div className='ad-form'>
                         <div
                             className='left'>
                             <div className='text-field'>

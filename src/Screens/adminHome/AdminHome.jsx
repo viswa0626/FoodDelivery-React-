@@ -19,11 +19,11 @@ const AdminHome = () => {
             </div>
 
 
-            <div className='right'>
+            {/* <div className='ad_right'> */}
                 {
                     index === 0 ? <AdminProducts /> : index === 1 ? <AdminOrders /> : <AddProduct />
                 }
-            </div>
+            {/* </div> */}
 
 
         </div>

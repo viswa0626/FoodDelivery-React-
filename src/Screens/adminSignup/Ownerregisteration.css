@@ -65,7 +65,7 @@ p{
 .size-h{
     height: 20px;
 }
-.form{
+.ad-form{
     display: flex;
     flex-direction: row;
     align-items: center;

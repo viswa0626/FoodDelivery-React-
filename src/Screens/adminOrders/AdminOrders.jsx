@@ -10,7 +10,7 @@ const AdminOrders = () => {
       "title": "Biryani",
       "name": "Anupama",
       "location": "Marthalli",
-      "des": "Teasy and speciy",
+      "des": "Tasty and spicy",
       "qty": 2,
       "price": 250
     },
@@ -20,7 +20,7 @@ const AdminOrders = () => {
       "title": "Rice",
       "name": "Amulaya",
       "location": "Kakinada, East g",
-      "des": "Teasy and speciy",
+      "des": "Tasty and spicy",
       "qty": 5,
       "price": 165
     },
@@ -30,7 +30,7 @@ const AdminOrders = () => {
       "title": "Roles",
       "name": "Viswa",
       "location": "Bhimavaram",
-      "des": "Teasy and speciy",
+      "des": "Tasty and spicy",
       "qty": 3,
       "price": 80
     },
@@ -40,7 +40,7 @@ const AdminOrders = () => {
       "title": "Pizza",
       "name": "Nikitha",
       "location": "Chandegar",
-      "des": "Teasy and speciy",
+      "des": "Tasty and spicy",
       "qty": 2,
       "price": 170
     },
@@ -50,7 +50,7 @@ const AdminOrders = () => {
       "title": "Burger",
       "name": "Pallavi",
       "location": "Hitech city, hyd",
-      "des": "Teasy and speciy",
+      "des": "Tasty and spicy",
       "qty": 1,
       "price": 133
     }
