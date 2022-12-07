@@ -6,11 +6,13 @@ import Userhome from "../src/Screens/userHome/Userhome";
 import Ownerregisteration from "../src/Screens/adminSignup/Ownerregisteration";
 import Customerregisteration from "../src/Screens/userSignup/Customerregistration";
 import AdminHome from "./Screens/adminHome/AdminHome";
+import PopupScreen from "./Components/Popup/PopupScreen";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* <Route path="/" element={<PopupScreen />} /> */}
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Userhome />} />
         <Route path="/registry" element={<Ownerregisteration />} />

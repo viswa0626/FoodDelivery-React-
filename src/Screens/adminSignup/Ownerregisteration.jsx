@@ -79,10 +79,10 @@ const Userregisteration = () => {
                         <div
                             className='right'>
                             <div>
-                                <div className='text-field'>
+                                {/* <div className='text-field'>
                                     <label className='label'>Enter place</label>
                                     <input onChange={(a) => setPlace(a.target.value)} value={place} className='input-text' type="text" placeholder='Enter place' name='uname' required></input>
-                                </div>
+                                </div> */}
                                 <div className='text-field'>
                                     <label className='label'>Enter city</label>
                                     <input onChange={(a) => setCity(a.target.value)} value={city} className='input-text' type="text" placeholder='Enter city' name="uname" required></input>
@@ -91,10 +91,10 @@ const Userregisteration = () => {
                                     <label className='label'>Enter state</label>
                                     <input onChange={(a) => setState(a.target.value)} value={state} className='input-text' type='text' placeholder="Enter state" name="uname" required></input>
                                 </div>
-                                <div className='text-field' >
+                                {/* <div className='text-field' >
                                     <label className='label'>Enter country</label>
                                     <input onChange={(a) => setCountry(a.target.value)} value={country} className='input-text' type="text" placeholder='Enter contry' name="uname" required></input>
-                                </div>
+                                </div> */}
                                 <div className='text-field'>
                                     <label className='label'>Enter pincode</label>
                                     <input onChange={(a) => setPincode(a.target.value)} value={pincode} className='input-text' type="text" placeholder="Enter pincode" name="uname" required></input>

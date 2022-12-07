@@ -1,5 +1,9 @@
 import React from 'react';
-import './ProductCard.css'
+import './ProductCard.css';
+import Popup from 'reactjs-popup';
+import EditAddProduct from '../../Screens/adminAddProduct/EditAddProduct';
+
+
 
 const ProductCard = (props) => {
     return (
@@ -28,7 +32,13 @@ const ProductCard = (props) => {
                         </div>
                     </div>
                     <div className='pro_edit_del'>
-                        <button className='pro_edit_btn pro_button'>Edit</button>
+                        <Popup className='edit_popup' trigger={<button className="pro_edit_btn pro_button" >Edit</button>}
+                            position="right center">
+                            <EditAddProduct />
+                            {/* <div>GeeksforGeeks</div>
+                            <button>Click here</button> */}
+                        </Popup>
+                        {/* <button className='pro_edit_btn pro_button'>Edit</button> */}
                         <button className='pro_del_btn pro_button'>Delete</button>
                     </div>
                 </div>

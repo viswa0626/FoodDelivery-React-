@@ -1,0 +1,19 @@
+.popup_screen {
+    position: relative;
+   width: 100%;
+   height: 100vh;
+    background-color: antiquewhite;
+}
+
+.close_icon {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    background-color: red;
+}
+
+.popup_content {
+    position: absolute;
+    top: 20px;
+    background-color: yellow;
+}

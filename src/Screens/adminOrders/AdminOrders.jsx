@@ -19,7 +19,7 @@ const AdminOrders = () => {
       "image": "https://images.pexels.com/photos/1410236/pexels-photo-1410236.jpeg?auto=compress&cs=tinysrgb&w=600",
       "title": "Rice",
       "name": "Amulaya",
-      "location": "Kakinada, East g",
+      "location": "jaynagar",
       "des": "Tasty and spicy",
       "qty": 5,
       "price": 165
@@ -29,7 +29,7 @@ const AdminOrders = () => {
       "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600",
       "title": "Roles",
       "name": "Viswa",
-      "location": "Bhimavaram",
+      "location": "Kundanahalli",
       "des": "Tasty and spicy",
       "qty": 3,
       "price": 80
@@ -39,7 +39,7 @@ const AdminOrders = () => {
       "image": "https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=600",
       "title": "Pizza",
       "name": "Nikitha",
-      "location": "Chandegar",
+      "location": "Banglore",
       "des": "Tasty and spicy",
       "qty": 2,
       "price": 170
@@ -49,7 +49,7 @@ const AdminOrders = () => {
       "image": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=600",
       "title": "Burger",
       "name": "Pallavi",
-      "location": "Hitech city, hyd",
+      "location": "Krishrajupuram",
       "des": "Tasty and spicy",
       "qty": 1,
       "price": 133

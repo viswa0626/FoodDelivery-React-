@@ -8,6 +8,7 @@ const Customerregistration = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
+  const [address,setAddress] = useState("")
 
   function onChangeFirstName(a) {
     setFirstName(a)
@@ -24,6 +25,9 @@ const Customerregistration = () => {
   function onChangePassword(a) {
     setPassword(a)
   }
+  function onChangeAddress(a) {
+    setAddress(a)
+  }
 
   function onSubmitForm(event) {
     event.preventDefault();
@@ -32,11 +36,14 @@ const Customerregistration = () => {
     console.log(email);
     console.log(phoneNumber);
     console.log(password);
+    console.log(address)
     setFirstName("");
     setLastName("");
     setEmail("");
     setPhoneNumber("");
     setPassword("");
+    setAddress("");
+
   }
   return (
     <div className='register'>
@@ -66,6 +73,10 @@ const Customerregistration = () => {
             <div className='text-field'>
               <label className='label'>Password</label>
               <input className='input-text' onChange={(a) => onChangePassword(a.target.value)} value={password} type="password" placeholder='Enter Password' name="pass"></input>
+            </div>
+            <div className='text-field'>
+              <label className='label'>Address</label>
+              <input className='input-text' onChange={(a) => onChangeAddress(a.target.value)} value={address} type="address" placeholder='Enter Address' name="pass"></input>
             </div>
             <div>
               <b><button className='button'>SignUp</button></b>
