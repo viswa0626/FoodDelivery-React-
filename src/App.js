@@ -7,6 +7,7 @@ import Ownerregisteration from "../src/Screens/adminSignup/Ownerregisteration";
 import Customerregisteration from "../src/Screens/userSignup/Customerregistration";
 import AdminHome from "./Screens/adminHome/AdminHome";
 import PopupScreen from "./Components/Popup/PopupScreen";
+import AdminLogin from "./Screens/AdminLogin/AdminLogin";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
         {/* <Route path="/" element={<PopupScreen />} /> */}
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Userhome />} />
+        <Route path="/userregis" element={<Customerregisteration />} />
         <Route path="/registry" element={<Ownerregisteration />} />
-        <Route path="/regis" element={<Customerregisteration />} />
+        
         <Route path="/admin" element={<AdminHome />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
       </Routes>
     </BrowserRouter>
   );

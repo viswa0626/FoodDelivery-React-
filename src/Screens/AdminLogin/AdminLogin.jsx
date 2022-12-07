@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Userhome from '../userHome/Userhome'
 import { Route, Link } from "react-router-dom";
 import Popup from 'reactjs-popup';
-import "./Login.css"
+import "../userLogin/Login.css"
 
 
-const Login = () => {
+const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -30,10 +30,10 @@ const Login = () => {
             <div className='Login'>
 
 
-                <div className='loginform'><h1>LogIn</h1>
+                <div className='loginform'><h1>Admin LogIn</h1>
                     <form onSubmit={submitForm}>
                         <div className='text-field'>
-                            <label className='label'>UserEmail</label>
+                            <label className='label'>Email</label>
                             <input onChange={(a) => onChangeEmail(a.target.value)} value={email} className='input-text' type="text" placeholder="  Enter Email" name="uname" required></input>
                         </div>
                         <div className='text-field'>
@@ -48,10 +48,10 @@ const Login = () => {
                         </button>
 
                     </form>
-                    <div>
+                    {/* <div>
                         <span>Don't have an account please <b>SignUp</b> as<b><button className='Owner'>
                             <Link to='/registry'>Restaurant Owner</Link></button></b> or <b><button><Link to='/userregis'>User</Link></button></b>Login as Admin  <b><button><Link to='/adminlogin'>Admin</Link></button></b>  </span>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='image'></div>
 
@@ -65,4 +65,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default AdminLogin

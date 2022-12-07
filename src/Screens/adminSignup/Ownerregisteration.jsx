@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Ownerregisteration.css';
-import { Route, Link } from "react-router-dom";
+import { Route, Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Userregisteration = () => {
     const [firstName, setFirstName] = useState("");
@@ -14,39 +15,81 @@ const Userregisteration = () => {
     const [state, setState] = useState("");
     const [country, setCountry] = useState("");
     const [pincode, setPincode] = useState("");
+    const navigate = useNavigate();
+
+    const navigateToHome = () => {
+        navigate('/');
+    };
 
 
-    function onSubmitForm(event) {
+
+    async function onSubmitForm(event) {
         event.preventDefault();
-        console.log(firstName);
-        console.log(lastName);
-        console.log(email);
-        console.log(phoneNumber);
-        console.log(password);
-        console.log(restName);
-        console.log(place);
-        console.log(city);
-        console.log(state);
-        console.log(country);
-        console.log(pincode);
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhoneNumber("");
-        setRestName("");
-        setPassword("")
-        setPlace("");
-        setCity("");
-        setState("");
-        setCountry("");
-        setPincode("");
+        // console.log(firstName);
+        // console.log(lastName);
+        // console.log(email);
+        // console.log(phoneNumber);
+        // console.log(password);
+        // console.log(restName);
+        // console.log(place);
+        // console.log(city);
+        // console.log(state);
+        // console.log(country);
+        // console.log(pincode);
+
+        // var url = proxy('/api/Owner', {
+        //     target: "https://localhost:44364",
+        //     // secure: false,
+        //     changeOrigin: true
+        // })
+
+
+        await axios.post("https://localhost:44364/api/Owner", {
+            ownerId: 0,
+            resturantName: restName.toString().trim(),
+            firstname: firstName.toString().trim(),
+            lastName: lastName.toString().trim(),
+            emailId: email.toString().trim(),
+            mobileNo: phoneNumber.toString().trim(),
+            state: state.toString().trim(),
+            city: city.toString().trim(),
+            pincode: pincode.toString().trim(),
+            password: password.toString().trim()
+        })
+            // await fetch('https://localhost:44364/api/Owner', {
+            //     method: 'GET'
+            // })
+            .then((a) => {
+                console.log(a);
+                setFirstName("");
+                setLastName("");
+                setEmail("");
+                setPhoneNumber("");
+                setRestName("");
+                setPassword("")
+                setPlace("");
+                setCity("");
+                setState("");
+                setCountry("");
+                setPincode("");
+            }).then(() => { navigate('/') }).catch((e) => {
+                console.log(e)
+            })
+
     }
+    
+
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     <Link to='/' />
+    //     console.log('me');
+    //   }
     return (
         <div className='head'>
             <div className='a-register'>
                 <div className='name'><h1>REGISTER</h1></div>
                 <p>Please fill this form to Create an Account</p>
-                <form onSubmit={onSubmitForm} className="b-form">
+                <form onSubmit={onSubmitForm} className="b-form" >
                     <div className='ad-form'>
                         <div
                             className='left'>
@@ -102,7 +145,7 @@ const Userregisteration = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='button'>
+                    <button className='button'  >
                         SignUp
                     </button>
                     <div className='size-h'></div>
