@@ -39,7 +39,7 @@ const ProductCard = (props) => {
                             <button>Click here</button> */}
                         </Popup>
                         {/* <button className='pro_edit_btn pro_button'>Edit</button> */}
-                        <button className='pro_del_btn pro_button'>Delete</button>
+                        <button className='pro_del_btn pro_button' onClick={props.deleteonClick}>Delete</button>
                     </div>
                 </div>
 

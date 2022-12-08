@@ -30,10 +30,10 @@ const Login = () => {
             <div className='Login'>
 
 
-                <div className='loginform'><h1>LogIn</h1>
+                <div className='loginform'><h1> User LogIn</h1>
                     <form onSubmit={submitForm}>
                         <div className='text-field'>
-                            <label className='label'>UserEmail</label>
+                            <label className='label'>Email</label>
                             <input onChange={(a) => onChangeEmail(a.target.value)} value={email} className='input-text' type="text" placeholder="  Enter Email" name="uname" required></input>
                         </div>
                         <div className='text-field'>
@@ -44,13 +44,14 @@ const Login = () => {
                         <div className='sized-box'></div>
                         <button className='button'>
                             {/* <Link to='/home'>Submit</Link> */}
-                            <Link to='/admin'>Submit</Link>
+                            Submit
                         </button>
 
                     </form>
                     <div>
                         <span>Don't have an account please <b>SignUp</b> as<b><button className='Owner'>
-                            <Link to='/registry'>Restaurant Owner</Link></button></b> or <b><button><Link to='/userregis'>User</Link></button></b>Login as Admin  <b><button><Link to='/adminlogin'>Admin</Link></button></b>  </span>
+                            <Link to='/registry'>Restaurant Owner</Link></button></b> or <b><button><Link to='/userregis'>User</Link></button></b>  </span>
+                            <p>Login as Admin  <b><button><Link to='/adminlogin'>Admin</Link></button></b></p>
                     </div>
                 </div>
                 <div className='image'></div>

@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../../Components/productCard/ProductCard';
 import './AdminProducts.css'
+import axios from 'axios';
 
 
 
 const AdminProducts = () => {
+
+    //TODO: write usestate 
+    const [adminProducts, setAdminProducts] = useState([]);
+    //TODO: write useeffect 
+
+    useEffect(() => {
+
+        axios.get("https://localhost:44364/api/Products").then((value) => {
+
+            setAdminProducts(value.data)
+            // console.log(value);
+            // console.log(adminProducts);
+        }).catch((error) => {
+            console.log(error)
+        })
+
+    }, [setAdminProducts])
+    function deleteProduct(id) {
+        var proList = adminProducts;
+        console.log(id)
+        axios.delete(`https://localhost:44364/api/Products/${id}`).then((value) => {
+            console.log(value);
+            proList.filter(function (letter) {
+                return letter["productId"] !== id;
+            });
+            setAdminProducts(proList)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+
+    console.log(adminProducts)
 
     const products = [
         {
@@ -98,8 +131,16 @@ const AdminProducts = () => {
     ];
     return (
         <div className='admin-products'>
-            {products.map((a) =>
-                <ProductCard key={a["id"]} image={a["image"]} title={a['title']} des={a["des"]} qty={a["qty"]} price={a["price"]} />
+            {adminProducts.map((a) =>
+                <ProductCard
+                    key={a["productId"]}
+                    image={a["productImage"]}
+                    title={a['name']}
+                    des={a["productDescription"]}
+                    qty={a["quantity"]}
+                    price={a["price"]}
+                    deleteonClick={() => deleteProduct(a["productId"])}
+                />
             )
             }
         </div>

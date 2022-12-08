@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './AddProduct.css';
+import axios from 'axios';
+import {useNavigate} from "react-router-dom"
 
 
 const EditAddProduct = (props) => {
@@ -8,19 +10,50 @@ const EditAddProduct = (props) => {
     const [desc, setDesc] = useState(props.desc);
     const [quantity, setQuantity] = useState(props.quantity);
     const [price, setPrice] = useState(props.price);
+    // const navigate = useNavigate();
 
-    function onSubmitForm(event) {
+    // const navigateToProductpage = () => {
+    //     navigate('/admin');
+    // };
+
+    async function onSubmitForm(event) {
         event.preventDefault();
         console.log(name);
         console.log(pImage);
         console.log(desc);
         console.log(quantity);
         console.log(price);
-        setName("");
-        setpImage("");
-        setDesc("");
-        setQuantity("");
-        setPrice("");
+        //change data and url
+        await axios.post("https://localhost:44364/api/Products", {
+            productId: 0,
+            name: name.toString().trim(),
+            price: parseInt(price.toString().trim()),
+            quantity: parseInt(quantity.toString().trim()),
+            categoryId: parseInt(1),
+            productImage: pImage.toString().trim(),
+            productDescription: desc.toString().trim(),
+            isAvailable: 0
+
+            // userId: 0,
+            // firstName: firstName.toString().trim(),
+            // lastName: lastName.toString().trim(),
+            // mobile: phoneNumber.toString().trim(),
+            // email: email.toString().trim(),
+            // address: address.toString().trim(),
+            // pincode: pincode.toString().trim(),
+            // password: password.toString().trim(),
+        })
+            .then((a) => {
+                console.log(a);
+                setName("");
+                setpImage("");
+                setDesc("");
+                setQuantity("");
+                setPrice("");
+            }).catch((e) => {
+                console.log(e)
+            })
+
     }
 
     return (
