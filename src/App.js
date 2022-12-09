@@ -21,6 +21,12 @@ function App() {
         
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
+        {/* <Route path='/' element={<UserDashboard/>} exact />
+      <Route path='/About' element={<ABOUT/>} exact />
+      <Route path='/FAQs' element={<FAQs/>} exact />
+      <Route path='/Starter' element={<Starter/>} exact />
+      <Route path='/AddPayModal' element={<AddPayModal/>} exact />
+      <Route path='/Payment' element={<Payment/>} exact /> */}
       </Routes>
     </BrowserRouter>
   );
