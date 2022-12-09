@@ -43,15 +43,15 @@ const Login = () => {
                         </div>
                         <div className='sized-box'></div>
                         <button className='button'>
-                            {/* <Link to='/home'>Submit</Link> */}
-                            Submit
+                            <Link to='/userHome'>Submit</Link>
+
                         </button>
 
                     </form>
                     <div>
                         <span>Don't have an account please <b>SignUp</b> as<b><button className='Owner'>
                             <Link to='/registry'>Restaurant Owner</Link></button></b> or <b><button><Link to='/userregis'>User</Link></button></b>  </span>
-                            <p>Login as Admin  <b><button><Link to='/adminlogin'>Admin</Link></button></b></p>
+                        <p>Login as Admin  <b><button><Link to='/adminlogin'>Admin</Link></button></b></p>
                     </div>
                 </div>
                 <div className='image'></div>

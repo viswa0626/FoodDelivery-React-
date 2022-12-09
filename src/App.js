@@ -15,10 +15,10 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<PopupScreen />} /> */}
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Userhome />} />
+        <Route path="/userHome" element={<Userhome />} />
         <Route path="/userregis" element={<Customerregisteration />} />
         <Route path="/registry" element={<Ownerregisteration />} />
-        
+
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
         {/* <Route path='/' element={<UserDashboard/>} exact />

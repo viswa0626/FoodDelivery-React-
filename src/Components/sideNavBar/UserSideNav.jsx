@@ -58,7 +58,19 @@ const UserSideNav = ({ sendIndex }) => {
                     <NavIcon onClick={() => {
                         setIndex(2)
                         sendIndex(2)
-                    }} icon={<FaAddressCard />} title="Add" instyle={index === 2 ? select : unSelect} iconStyle={index === 2 ? iconSelect : iconUnSelect} titleStyle={index === 2 ? titleSelect : titleUnSelect} />
+                    }} icon={<FaAddressCard />} title="Cart" instyle={index === 2 ? select : unSelect} iconStyle={index === 2 ? iconSelect : iconUnSelect} titleStyle={index === 2 ? titleSelect : titleUnSelect} />
+                    <NavIcon onClick={() => {
+                        setIndex(3)
+                        sendIndex(3)
+                    }} icon={<FaAddressCard />} title="Payment" instyle={index === 3 ? select : unSelect} iconStyle={index === 3 ? iconSelect : iconUnSelect} titleStyle={index === 3 ? titleSelect : titleUnSelect} />
+                    <NavIcon onClick={() => {
+                        setIndex(4)
+                        sendIndex(4)
+                    }} icon={<FaAddressCard />} title="FAQ" instyle={index === 4 ? select : unSelect} iconStyle={index === 4 ? iconSelect : iconUnSelect} titleStyle={index === 4 ? titleSelect : titleUnSelect} />
+                    <NavIcon onClick={() => {
+                        setIndex(5)
+                        sendIndex(5)
+                    }} icon={<FaAddressCard />} title="About" instyle={index === 5 ? select : unSelect} iconStyle={index === 5 ? iconSelect : iconUnSelect} titleStyle={index === 5 ? titleSelect : titleUnSelect} />
                 </div>
             </div>
             <div className='bottom'>
