@@ -1,8 +1,26 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import OrderCard from '../../Components/orderCard/OrderCard';
 import './AdminOrders.css'
+import axios from 'axios';
 
 const AdminOrders = () => {
+  const [adminOrders, setAdminOrders] = useState([]);
+  //TODO: write useeffect 
+
+  useEffect(() => {
+
+    axios.get("https://localhost:44364/api/Orders").then((value) => {
+
+      setAdminOrders(value.data)
+      // console.log(value);
+      // console.log(adminProducts);
+    }).catch((error) => {
+      console.log(error)
+    })
+
+  }, [setAdminOrders])
+
+  console.log(adminOrders)
   const orders = [
     {
       "id": 1,
@@ -57,7 +75,17 @@ const AdminOrders = () => {
   ];
   return (
     <div className='admin-orders'>
-      {orders.map(a => <OrderCard key={a['id']} image={a['image']} title={a['title']} name={a['name']} location={a['location']} des={a['des']} qty={a['qty']} price={a['price'] * a['qty']} />)}
+      {adminOrders.map(a => <OrderCard 
+      key={a['orderDetailsId']} 
+      image={'image'} 
+      // image={a['image']} 
+      title={a['itemName']} 
+      name={a['userName']} 
+      location={a['userAddress']} 
+      qty={a['quantity']} 
+      des={'des'} 
+      // des={a['des']} 
+      price={a['totalCost'] * a['quantity']} />)}
 
 
     </div>

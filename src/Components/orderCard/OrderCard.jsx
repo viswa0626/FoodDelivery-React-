@@ -2,6 +2,7 @@ import React from 'react';
 import './OrderCard.css'
 
 const OrderCard = (props) => {
+    
     return (
         <div className='o-card'>
             <img className='o-image' src={props.image} />

@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import NavIcon from '../NavIcon/NavIcon';
 import "./SideNavBar.css";
+import { Link, useNavigate } from 'react-router-dom';
+
 import { FaHome, FaSignOutAlt, FaAddressCard, FaJediOrder } from 'react-icons/fa';
 
 
 const SideNavBar = ({ sendIndex }) => {
     const [index, setIndex] = useState(0);
+
+    const navigate = useNavigate();
+
+    const navigateToLogin = () => {
+        // 👇️ navigate to /contacts
+        navigate('/');
+    };
+
+
 
     const select = {
         background: "var(--primary)",
@@ -51,10 +62,21 @@ const SideNavBar = ({ sendIndex }) => {
                 </div>
             </div>
             <div className='bottom'>
-                <NavIcon icon={<FaSignOutAlt />} title="Logout" />
+                <NavIcon onClick={() => {
+                    console.log("is this logout")
+                    navigateToLogin()
+                }
+                }
+
+                    icon={<FaSignOutAlt />} title="Logout" />
+
+
+
             </div>
         </div>
     )
+
+
 }
 
 export default SideNavBar

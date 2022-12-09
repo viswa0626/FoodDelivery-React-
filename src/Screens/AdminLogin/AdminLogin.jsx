@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Userhome from '../userHome/Userhome'
-import { Route, Link } from "react-router-dom";
+import { Route, Link, useNavigate } from "react-router-dom";
 import Popup from 'reactjs-popup';
 import "../userLogin/Login.css"
 
@@ -8,6 +8,11 @@ import "../userLogin/Login.css"
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    function navigateToAdmin(){
+        navigate("/admin")
+    }
 
     function onChangeEmail(a) {
         setEmail(a);
@@ -22,6 +27,7 @@ const AdminLogin = () => {
         console.log(password);
         setEmail("");
         setPassword("");
+        navigateToAdmin();
     }
 
     return (
@@ -44,7 +50,9 @@ const AdminLogin = () => {
                         <div className='sized-box'></div>
                         <button className='button'>
                             {/* <Link to='/home'>Submit</Link> */}
-                            <Link to='/admin'>Submit</Link>
+                            {/* <Link to='/admin'> */}
+                                Submit
+                                {/* </Link> */}
                         </button>
 
                     </form>
