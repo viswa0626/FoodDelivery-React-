@@ -40,11 +40,11 @@ const AdminLogin = () => {
                     <form onSubmit={submitForm}>
                         <div className='text-field'>
                             <label className='label'>Email</label>
-                            <input onChange={(a) => onChangeEmail(a.target.value)} value={email} className='input-text' type="text" placeholder="  Enter Email" name="uname" required></input>
+                            <input onChange={(a) => onChangeEmail(a.target.value)} value={email} className='input-text' type="email" placeholder="  Enter Email" name="uname" required></input>
                         </div>
                         <div className='text-field'>
                             <label className='label'>Password</label>
-                            <input onChange={(a) => onChangePassword(a.target.value)} value={password} className='input-text' type="text" placeholder="  Enter Password" name="psw" required></input>
+                            <input onChange={(a) => onChangePassword(a.target.value)} value={password} className='input-text' type="password" placeholder="  Enter Password" name="psw" required></input>
 
                         </div>
                         <div className='sized-box'></div>
