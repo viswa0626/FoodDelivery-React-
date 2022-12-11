@@ -2,6 +2,7 @@ import React from 'react';
 import './ProductCard.css';
 import Popup from 'reactjs-popup';
 import EditAddProduct from '../../Screens/adminAddProduct/EditAddProduct';
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,13 +33,23 @@ const ProductCard = (props) => {
                         </div>
                     </div>
                     <div className='pro_edit_del'>
-                        <Popup className='edit_popup' trigger={<button className="pro_edit_btn pro_button" >Edit</button>}
+                        {/* <Popup className='edit_popup' trigger={<button className="pro_edit_btn pro_button" >Edit</button>}
                             position="right center">
                             <EditAddProduct />
                             {/* <div>GeeksforGeeks</div>
                             <button>Click here</button> */}
-                        </Popup>
-                        {/* <button className='pro_edit_btn pro_button'>Edit</button> */}
+                        {/* </Popup> */}
+                        <button className='pro_edit_btn pro_button' onClick={props.editonClick}>Edit</button>
+                        {/* <button className='pro_del_btn pro_button'>
+                            <Link 
+                            className='edit_pro_link' 
+                            to="/editProduct" 
+                            productId={props.productId} 
+                            productName={props.title} 
+                            productImage={props.image} 
+                            productDesc={props.des} 
+                            productQuantity={props.qty} 
+                            productPrice={props.price}>Edit</Link></button> */}
                         <button className='pro_del_btn pro_button' onClick={props.deleteonClick}>Delete</button>
                     </div>
                 </div>

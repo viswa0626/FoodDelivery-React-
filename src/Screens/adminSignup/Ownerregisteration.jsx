@@ -78,12 +78,6 @@ const Userregisteration = () => {
 
     }
     
-
-    // function handleSubmit(event) {
-    //     event.preventDefault();
-    //     <Link to='/' />
-    //     console.log('me');
-    //   }
     return (
         <div className='head'>
             <div className='a-register'>

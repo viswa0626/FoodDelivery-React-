@@ -63,7 +63,6 @@ const SideNavBar = ({ sendIndex }) => {
             </div>
             <div className='bottom'>
                 <NavIcon onClick={() => {
-                    console.log("is this logout")
                     navigateToLogin()
                 }
                 }

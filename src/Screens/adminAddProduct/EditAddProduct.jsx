@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import './AddProduct.css';
 import axios from 'axios';
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 const EditAddProduct = (props) => {
+
     const [name, setName] = useState(props.name);
     const [pImage, setpImage] = useState(props.pImage);
     const [desc, setDesc] = useState(props.desc);
     const [quantity, setQuantity] = useState(props.quantity);
     const [price, setPrice] = useState(props.price);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    // const navigateToProductpage = () => {
-    //     navigate('/admin');
-    // };
+    const navigateToProductpage = () => {
+        navigate('/admin');
+    };
 
     async function onSubmitForm(event) {
         event.preventDefault();
-        console.log(name);
-        console.log(pImage);
-        console.log(desc);
-        console.log(quantity);
-        console.log(price);
-        //change data and url
+        props.isEdit ? editPro() : addPro()
+
+    }
+
+    async function addPro() {
         await axios.post("https://localhost:44364/api/Products", {
             productId: 0,
             name: name.toString().trim(),
@@ -33,15 +33,6 @@ const EditAddProduct = (props) => {
             productImage: pImage.toString().trim(),
             productDescription: desc.toString().trim(),
             isAvailable: 0
-
-            // userId: 0,
-            // firstName: firstName.toString().trim(),
-            // lastName: lastName.toString().trim(),
-            // mobile: phoneNumber.toString().trim(),
-            // email: email.toString().trim(),
-            // address: address.toString().trim(),
-            // pincode: pincode.toString().trim(),
-            // password: password.toString().trim(),
         })
             .then((a) => {
                 console.log(a);
@@ -53,14 +44,36 @@ const EditAddProduct = (props) => {
             }).catch((e) => {
                 console.log(e)
             })
-
+    }
+    async function editPro() {
+        await axios.put(`https://localhost:44364/api/Products/${parseInt(props.productId)}`, {
+            productId: parseInt(props.productId),
+            name: name.toString().trim(),
+            price: parseInt(price.toString().trim()),
+            quantity: parseInt(quantity.toString().trim()),
+            categoryId: parseInt(1),
+            productImage: pImage.toString().trim(),
+            productDescription: desc.toString().trim(),
+            isAvailable: 0
+        })
+            .then((a) => {
+                console.log(a);
+                setName("");
+                setpImage("");
+                setDesc("");
+                setQuantity("");
+                setPrice("");
+                navigateToProductpage()
+            }).catch((e) => {
+                console.log(e)
+            })
     }
 
     return (
         <div className='add_product_screen'>
             <div className='add_product'>
 
-                <div><h1>Add Products</h1></div>
+                <div><h1>{props.isEdit ? "Edit Product" : "Add Product"}</h1></div>
                 <form onSubmit={onSubmitForm} className='form'>
                     <div className='add_text_field'>
                         <label className='add_label'>Item Name</label>
@@ -82,7 +95,7 @@ const EditAddProduct = (props) => {
                         <label className='add_label'>price</label>
                         <input className='add_input_text' onChange={(a) => setPrice(a.target.value)} value={price} type="number" placeholder='  Enter price' name="uname" required></input>
                     </div>
-                    <button className='add_button'>Add product</button>
+                    <button className='add_button'>{props.isEdit ? "Edit Product" : "Add Product"}</button>
                 </form>
 
             </div>

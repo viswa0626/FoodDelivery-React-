@@ -73,16 +73,6 @@ const Customerregistration = () => {
     setPincode(a)
   }
 
-  // function onSubmitForm(event) {
-  //   event.preventDefault();
-  //   console.log(firstName);
-  //   console.log(lastName);
-  //   console.log(email);
-  //   console.log(phoneNumber);
-  //   console.log(password);
-  //   console.log(address)
-  //   console.log(pincode)
-
 return (
   <div className='register'>
     <div className='re-card'>
