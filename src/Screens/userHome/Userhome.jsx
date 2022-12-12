@@ -5,6 +5,7 @@ import UserCart from '../UserCart/UserCart';
 import { FAQs } from '../UserFAQ/UserFAQ';
 import UserProducts from '../UserProducts/UserProducts';
 import "./Userhome.css"
+import AdminOrders from '../adminOrders/AdminOrders'
 
 
 // const Userhome = () => {
@@ -29,7 +30,7 @@ const Userhome = () => {
 
       {/* <div className='ad_right'> */}
       {
-        index === 0 ? <UserProducts /> : index === 1 ? <div>1</div> : index === 2 ? <UserCart /> : index === 3 ? <div>3</div> : index === 4 ? <FAQs /> : <ABOUT />
+        index === 0 ? <UserProducts /> : index === 1 ? <AdminOrders /> : index === 2 ? <UserCart /> : index === 3 ? <div>3</div> : index === 4 ? <FAQs /> : <ABOUT />
       }
       {/* </div> */}
 
