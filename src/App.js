@@ -9,6 +9,7 @@ import AdminHome from "./Screens/adminHome/AdminHome";
 import PopupScreen from "./Components/Popup/PopupScreen";
 import AdminLogin from "./Screens/AdminLogin/AdminLogin";
 import EditProduct from "./Screens/adminAddProduct/EditProduct";
+import { AddPayModal } from "./Screens/UserPayment/AddPayModal";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
 
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/addpay" element={<AddPayModal />} />
+
         {/* <Route path='/' element={<UserDashboard/>} exact />
       <Route path='/About' element={<ABOUT/>} exact />
       <Route path='/FAQs' element={<FAQs/>} exact />

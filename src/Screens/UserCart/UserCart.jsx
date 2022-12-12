@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UserCart.css";
+import { Link } from "react-router-dom";
 
 const UserCart = () => {
   const [cartItems, setCartItems] = useState([])
@@ -61,6 +62,8 @@ const UserCart = () => {
       <div className="aml_total">
         <span>Total Price of your Cart</span>
         <span>Rs - {price}</span>
+        <button variant='primary' style={{backgroundColor:"#581845",borderRadius:'20px', border:'3px solid black', width:140, height:100, padding:20, color:"white", marginLeft:100, marginRight:80, fontWeight:'bold', fontSize:18}}>
+          <Link to='/addpay'>Place Order</Link></button>
       </div>
     </div>
   );
