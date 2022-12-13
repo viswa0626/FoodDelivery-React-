@@ -31,7 +31,7 @@ const Userhome = () => {
 
       {/* <div className='ad_right'> */}
       {
-        index === 0 ? <UserProducts /> : index === 1 ? <div></div> : index === 2 ? <UserCart /> : index === 3 ? <Payment /> : index === 4 ? <FAQs /> : <ABOUT />
+        index === 0 ? <UserProducts /> : index === 1 ? <AdminOrders /> : index === 2 ? <UserCart /> : index === 3 ? <Payment /> : index === 4 ? <FAQs /> : <ABOUT />
       }
       {/* </div> */}
 

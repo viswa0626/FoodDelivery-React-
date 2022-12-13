@@ -31,7 +31,8 @@ export class Payment extends Component {
         const myStyle = {
             backgroundImage:
                 "url('https://images.moneycontrol.com/static-mcnews/2022/06/Indian-Digital-Payments_pic.jpg?impolicy=website&width=770&height=431')",
-            height: '90vh',
+            height: '100vh',
+            width:"100%",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -68,7 +69,7 @@ export class Payment extends Component {
 
                 </Table>
 
-                {/* <a href='./UserDashboard' style={{marginRight:'10px'}}>Back</a> */}
+                <a href='./userHome' style={{marginRight:'10px'}}>Back</a>
 
             </div>
         )

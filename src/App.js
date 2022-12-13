@@ -24,7 +24,7 @@ function App() {
 
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="/addpay" element={<AddPayModal />} />
+        <Route path="/addpay" element={<AddPayModal/>} />
 
         {/* <Route path='/' element={<UserDashboard/>} exact />
       <Route path='/About' element={<ABOUT/>} exact />

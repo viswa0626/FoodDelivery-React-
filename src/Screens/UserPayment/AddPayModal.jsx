@@ -1,40 +1,37 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import axios from 'axios';
-
-
-import { Button, Card, CardFooter, CardBody, CardGroup, Col, Container, Form, 
-    Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-
-  export class AddPayModal extends React.Component {
+import { Button, Card, CardBody, Col, Container, Form, Input, InputGroup, Row } from 'reactstrap';
+    
+export class AddPayModal extends React.Component {
   constructor() {
 
-    
     super();
     this.state = {
-        pays: [],
-      paymentId: null,
       name: '',
       cardNo: '',
       expiryDate: '',
       cvvNo: '',
       address: '',
       paymentMode: ''
+            
     }
 
-    this.paymentId = null;
     this.name = this.name.bind(this);
     this.cardNo = this.cardNo.bind(this);
     this.expiryDate = this.expiryDate.bind(this);
     this.cvvNo = this.cvvNo.bind(this);
     this.address = this.address.bind(this);
     this.paymentMode = this.paymentMode.bind(this);
+    this.register = this.register.bind(this);
   }
+
+  
+  
 
   name(event) {
     this.setState({ name: event.target.value })
   }
-
+ 
   cardNo(event) {
     this.setState({ cardNo: event.target.value })
   }
@@ -42,42 +39,51 @@ import { Button, Card, CardFooter, CardBody, CardGroup, Col, Container, Form,
   expiryDate(event) {
     this.setState({ expiryDate: event.target.value })
   }
- 
   cvvNo(event) {
     this.setState({ cvvNo: event.target.value })
   }
   address(event) {
     this.setState({ address: event.target.value })
   }
+
   paymentMode(event) {
     this.setState({ paymentMode: event.target.value })
   }
+ 
+  register(event) {
+    let x = parseInt(this.state.cvvNo);
 
-//   this.state = {
-//     pays: [],
-//     addModalShow: false,
-//     editModalShow: false,
-//     testModalShow: false
-// };
+   let body = {
+            name : this.state.name,
+            cardNo: this.state.cardNo,
+            expiryDate: this.state.expiryDate,
+            cvvNo: x,
+            address: this.state.address,
+            paymentMode: this.state.paymentMode
+          }
 
-
-async refreshList() {
-    const value = await axios.post('https://localhost:44364/api/Payment');
-    //console.log(value);
-    this.setState({ pays: value.data }, () =>
-        console.log(this.state.pays));
+  let ApiCall = axios.post('https://localhost:44364/api/Payment', body)
+  .then(response => {
+    console.log(response);
+    if (response.status === 201)
+    {     
+            alert('Successfully Added')
+            //this.props.history.push("/Payment");
+    }
+  }).catch(function(error){
+    console.log(error)
+    alert('failed')
+  })
 }
 
-componentDidMount() {
-    this.refreshList();
-}
+
  
   render() {
     const myStyle={
       backgroundImage:
-      "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83_9wSml9cgYC5tvXuhgX1bS60VeCw97CIQ&usqp=CAU')",
-      height: '75vh',
-      width: '220vh',
+      "url('https://picsum.photos/id/270/1920/1080.jpg?blur=2')",
+      height: '77vh',
+      width: '208vh',
       marginLeft:2,
       fontSize:'20px',
       backgroundSize: 'cover',
@@ -88,7 +94,6 @@ componentDidMount() {
 
       <div className="app flex-row align-items-center"  style={myStyle}>
 
-        <div style={{backgroundColor: "grey", width: "190px", height: "200px", alignItems: "center", marginLeft: "600px"}}>
         <Container>
 
           <Row className="justify-content-center">
@@ -113,22 +118,22 @@ componentDidMount() {
 
                     <InputGroup className="mb-3">
 
-                      <Input type="text"  required id='name'
+                      <Input type="text" id='name'
 
-                      onChange={this.name} placeholder="Enter Name" />
+                      onChange={this.name} placeholder="Enter User Name" required="required"/>
 
                     </InputGroup>
 
                     <InputGroup className="mb-3">
 
-                      <Input type="text"  required
+                      <Input type="text" required="required"
 
-                      onChange={this.cardNo} placeholder="Enter Card No"  bssize="50px"/>
+                      onChange={this.cardNo} placeholder="Enter Card No"  />
 
                     </InputGroup>
                     <InputGroup className="mb-3">
 
-                      <Input type="text"  required
+                      <Input type="text" required="required"
 
                       onChange={this.expiryDate} placeholder="Enter Expiry Date" />
 
@@ -136,15 +141,15 @@ componentDidMount() {
 
                     <InputGroup className="mb-3">
 
-                      <Input type="cvvNo"  required
+                      <Input type="password" required="required"
 
-                      onChange={this.Password} placeholder="Enter CVV" />
+                      onChange={this.cvvNo} placeholder="Enter CVV No" />
 
                     </InputGroup>
 
                     <InputGroup className="mb-4">
 
-                      <Input type="text"  required
+                      <Input type="text" required="required"
 
                       onChange={this.address} placeholder="Enter Address" />
 
@@ -152,15 +157,15 @@ componentDidMount() {
 
                     <InputGroup className="mb-4">
 
-                      <Input type="text"  required
+                      <Input type="text" required="required"
 
                       onChange={this.paymentMode} placeholder="Enter Payment Mode" />
 
                     </InputGroup>
 
-                    <Button  onClick={this.refreshList}  
+                    <Button  onClick={this.register}  
 
-                   style={{backgroundColor:'#008B8B'}} block>Pay</Button>
+                   style={{backgroundColor:'  #008B8B'}} block>Pay</Button>
 
                   </Form>
 
@@ -174,18 +179,14 @@ componentDidMount() {
 
         </Container>
 
-        <div style={{backgroundColor: "white", width: "50px", marginLeft: "70px", marginTop: "5px"}}>
         <a href='./Cart'>Back</a>
-        </div>
-
-        </div>
 
       </div>
-
-     
 
     );
 
   }
 
 }
+
+export default AddPayModal;

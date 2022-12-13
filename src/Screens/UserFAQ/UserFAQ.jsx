@@ -4,8 +4,16 @@ import React, { Component } from "react";
 export class FAQs extends Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#EE8740", marginLeft: 10 }}>
+
+      <div   style={{ backgroundColor: "#EE8740"}}>
+
+      
+      <div style={{ marginLeft: 40 }}>
+
+        <div style={{marginLeft:"20px"}}>
         <h1 class="faq-heading">FAQ'S</h1>
+        </div>
+       
 
         <div class="faq-one">
           <h1 class="faq-page" style={{ textAlign: "left", fontSize: "21px" }}>
@@ -99,6 +107,8 @@ export class FAQs extends Component {
             </p>
           </div>
         </div>
+      </div>
+
       </div>
     );
   }

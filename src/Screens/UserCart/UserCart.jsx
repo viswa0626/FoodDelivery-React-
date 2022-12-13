@@ -2,20 +2,21 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UserCart.css";
 import { Link } from "react-router-dom";
+import { userCartItemList } from "../UserProducts/UserProducts";
 
 const UserCart = () => {
   const [cartItems, setCartItems] = useState([])
   const [price, setPrice] = useState(0);
 
   const handleRemove = (id) => {
-    // const arr = cart.filter((item) => item.id !== id);
+    const arr = userCartItemList.filter((item) => item['productId'] !== id);
     // setCart(arr);
     handlePrice();
   };
 
   const handlePrice = () => {
     let ans = 0;
-    // cart.map((item) => (ans += item.amount * item.price));
+    userCartItemList.map((item) => (ans += item["quantity"] * item["price"]));
     setPrice(ans);
   };
 
@@ -34,11 +35,11 @@ const UserCart = () => {
 
   return (
     <div className="aml_cart_item">
-      {cartItems.map((item) => (
-        <div className="aml_cart_box" key={item.id}>
+      {userCartItemList.map((item) => (
+        <div className="aml_cart_box" key={item['productId']}>
           <div className="aml_cart_img">
-            <img src={item.img} alt="" />
-            <p>{item.title}</p>
+            <img src={item['productImage']} alt="" />
+            <p>{item['name']}</p>
           </div>
           <div>
             <button onClick={() => {
@@ -46,7 +47,7 @@ const UserCart = () => {
 
             }
             }>+</button>
-            <button>{item.amount}</button>
+            <button>{item['quantity']}</button>
             <button onClick={() => {
               //  handleChange(item, -1)
 
@@ -55,7 +56,7 @@ const UserCart = () => {
           </div>
           <div>
             <span>{item.price}</span>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
+            <button onClick={() => handleRemove(item['productId'])}>Remove</button>
           </div>
         </div>
       ))}

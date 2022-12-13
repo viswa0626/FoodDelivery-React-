@@ -19,12 +19,12 @@ export class ABOUT extends Component {
     return (
       <div style={myStyle}>
         {/* <div  style={myStyle}> </div> */}
-        <div style={{ marginTop: 10 }}>
+        <div style={{marginTop:"30px", marginLeft:"400px" }}>
           <img
             src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg"
             height="300"
             width="500"
-            marginLeft="10"
+           
           />
         </div>
         <h4 style={{ marginLeft: 700, margin: 60 }}>
