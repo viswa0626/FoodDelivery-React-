@@ -3,7 +3,7 @@ import UserSideNav from '../../Components/sideNavBar/UserSideNav';
 import { ABOUT } from '../About/UserAbout';
 import UserCart from '../UserCart/UserCart';
 import { FAQs } from '../UserFAQ/UserFAQ';
-import UserProducts from '../UserProducts/UserProducts';
+import UserProducts, { userCartItemList } from '../UserProducts/UserProducts';
 import "./Userhome.css"
 import AdminOrders from '../adminOrders/AdminOrders'
 import { Payment } from '../UserPayment/Payment';
@@ -31,7 +31,7 @@ const Userhome = () => {
 
       {/* <div className='ad_right'> */}
       {
-        index === 0 ? <UserProducts /> : index === 1 ? <AdminOrders /> : index === 2 ? <UserCart /> : index === 3 ? <Payment /> : index === 4 ? <FAQs /> : <ABOUT />
+        index === 0 ? <UserProducts /> : index === 1 ? <AdminOrders /> : index === 2 ? <UserCart userProList={userCartItemList} /> : index === 3 ? <Payment /> : index === 4 ? <FAQs /> : <ABOUT />
       }
       {/* </div> */}
 

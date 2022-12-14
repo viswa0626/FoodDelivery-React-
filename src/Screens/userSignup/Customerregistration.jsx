@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import './Customerregistration.css';
 import axios from 'axios';
+import Popup from 'reactjs-popup';
 
 const Customerregistration = () => {
   const [firstName, setFirstName] = useState("");
@@ -42,7 +43,12 @@ const Customerregistration = () => {
         setPassword("");
         setAddress("");
         setPincode("");
-      }).then(() => { navigate('/') }).catch((e) => {
+      }).then(() => {  
+        // Popup("Registration Successfull");
+        navigate('/') ;
+        
+        <Popup>Registration Successfull</Popup>
+      }).catch((e) => {
         console.log(e)
       })
 
@@ -96,7 +102,7 @@ return (
           </div>
           <div className='text-field'>
             <label className='label'>Phonenumber</label>
-            <input className='input-text' onChange={(a) => onChangePhoneNumber(a.target.value)} value={phoneNumber} type="phonenumber" placeholder='Enter Phno' name="phno"></input>
+            <input className='input-text' onChange={(a) => onChangePhoneNumber(a.target.value)} value={phoneNumber} type="text" placeholder='Enter Phno' name="phno"></input>
           </div>
           <div className='text-field'>
             <label className='label'>Password</label>
@@ -112,6 +118,9 @@ return (
           </div>
           <div>
             <b><button className='button'>SignUp</button></b>
+            <Popup trigger={<b><button className='button'>SignUp</button></b>}> 
+              <p>Registration Succesfull</p> 
+             </Popup>
           </div>
         </form>
       </div>
@@ -120,4 +129,4 @@ return (
 )
 }
 
-export default Customerregistration
+export default Customerregistration;

@@ -81,9 +81,9 @@ export class AddPayModal extends React.Component {
   render() {
     const myStyle={
       backgroundImage:
-      "url('https://picsum.photos/id/270/1920/1080.jpg?blur=2')",
-      height: '77vh',
-      width: '208vh',
+      "url('https://images.pexels.com/photos/1639563/pexels-photo-1639563.jpeg?auto=compress&cs=tinysrgb&w=600')",
+      height: '100vh',
+      width: '100%',
       marginLeft:2,
       fontSize:'20px',
       backgroundSize: 'cover',
@@ -93,7 +93,7 @@ export class AddPayModal extends React.Component {
     return (
 
       <div className="app flex-row align-items-center"  style={myStyle}>
-
+           <div style={{ width: "190px", height: "200px", alignItems: "center", paddingTop:"300px",  marginTop:"10px", marginLeft: "715px"}}>
         <Container>
 
           <Row className="justify-content-center">
@@ -104,36 +104,40 @@ export class AddPayModal extends React.Component {
 
                 <CardBody className="p-4">
 
-                  <Form onSubmit={this.handleSubmit}>
+                  
 
-                    <div class="row" className="mb-2 pageheading">
+                   
 
-                      <div class="col-sm-12 btn btn-primary bg-dark">
+                      <div class="col-sm-12 btn btn-primary bg-dark" style={{color:"white", marginLeft:"20px"}}>
 
-                        Enter Details
+                       <h2> Enter Details </h2> 
 
-                        </div>
+                      </div>
 
-                    </div>
+                  <Form onSubmit={this.handleSubmit} style={{fontSize:"30px"}}>
+
+                      <div class="row" className="mb-2 pageheading"> 
+
+                      </div>
 
                     <InputGroup className="mb-3">
 
                       <Input type="text" id='name'
 
-                      onChange={this.name} placeholder="Enter User Name" required="required"/>
+                      onChange={this.name} placeholder="Enter Name" required="required" style={{fontSize:"18px", marginTop:"20px"}}/>
 
                     </InputGroup>
 
                     <InputGroup className="mb-3">
 
-                      <Input type="text" required="required"
+                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
-                      onChange={this.cardNo} placeholder="Enter Card No"  />
+                      onChange={this.cardNo} placeholder="Enter Card No" bssize="50px" />
 
                     </InputGroup>
                     <InputGroup className="mb-3">
 
-                      <Input type="text" required="required"
+                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.expiryDate} placeholder="Enter Expiry Date" />
 
@@ -141,7 +145,7 @@ export class AddPayModal extends React.Component {
 
                     <InputGroup className="mb-3">
 
-                      <Input type="password" required="required"
+                      <Input type="password" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.cvvNo} placeholder="Enter CVV No" />
 
@@ -149,7 +153,7 @@ export class AddPayModal extends React.Component {
 
                     <InputGroup className="mb-4">
 
-                      <Input type="text" required="required"
+                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.address} placeholder="Enter Address" />
 
@@ -157,7 +161,7 @@ export class AddPayModal extends React.Component {
 
                     <InputGroup className="mb-4">
 
-                      <Input type="text" required="required"
+                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.paymentMode} placeholder="Enter Payment Mode" />
 
@@ -165,7 +169,7 @@ export class AddPayModal extends React.Component {
 
                     <Button  onClick={this.register}  
 
-                   style={{backgroundColor:'  #008B8B'}} block>Pay</Button>
+                   style={{backgroundColor:'	#008B8B' ,fontSize:"20px", marginLeft:"85px", marginTop:"20px", height:"40px", width:"60px"}} block>Pay</Button>
 
                   </Form>
 
@@ -179,7 +183,13 @@ export class AddPayModal extends React.Component {
 
         </Container>
 
-        <a href='./Cart'>Back</a>
+        <div style={{backgroundColor: "white", width: "50px", marginLeft: "20px", marginTop: "170px"}}>
+
+        <a href='./UserCart'>Back</a>
+
+        </div>
+
+      </div>
 
       </div>
 

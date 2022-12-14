@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<PopupScreen />} /> */}
+        {/* <Route path="/" element={<PopupScreen closeOnClick={() => console.log("close on click")} isYesOrNo={true} yesOnClick={() => console.log("clicked on yes button")} noOnclick={() => console.log("no on click")} />} /> */}
         <Route path="/" element={<Login />} />
         <Route path="/userHome" element={<Userhome />} />
         <Route path="/userregis" element={<Customerregisteration />} />
@@ -24,7 +24,7 @@ function App() {
 
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="/addpay" element={<AddPayModal/>} />
+        <Route path="/addpay" element={<AddPayModal />} />
 
         {/* <Route path='/' element={<UserDashboard/>} exact />
       <Route path='/About' element={<ABOUT/>} exact />

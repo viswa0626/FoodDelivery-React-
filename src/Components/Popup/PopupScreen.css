@@ -1,19 +1,43 @@
 .popup_screen {
     position: relative;
-   width: 100%;
-   height: 100vh;
-    background-color: antiquewhite;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rebeccapurple;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .close_icon {
     position: absolute;
-    height: 50%;
-    width: 50%;
-    background-color: red;
+    right: -10px;
+    top: -10px;
+    height: 20px;
+    width: 20px;
 }
 
 .popup_content {
-    position: absolute;
-    top: 20px;
+    position: relative;
+    /* top: 20px; */
     background-color: yellow;
+}
+
+.popup_btn_con {
+    position: relative;
+    width: 100%;
+    /* top: 20px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.popup_btn{
+    height: 40px;
+    width: 40%;
 }
