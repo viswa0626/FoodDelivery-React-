@@ -3,6 +3,7 @@ import ProductCard from '../../Components/productCard/ProductCard';
 import { Link, useNavigate } from 'react-router-dom';
 import './AdminProducts.css'
 import axios from 'axios';
+import PopupScreen from '../../Components/Popup/PopupScreen';
 
 
 const AdminProducts = () => {
@@ -10,6 +11,7 @@ const AdminProducts = () => {
 
     //TODO: write usestate 
     const [adminProducts, setAdminProducts] = useState([]);
+    const [popup, setPopup] = useState({ id: 0, show: false });
     //TODO: write useeffect 
 
     useEffect(() => {
@@ -29,6 +31,11 @@ const AdminProducts = () => {
                 return letter["productId"] !== id;
             });
             setAdminProducts(proList)
+            // axios.get("https://localhost:44364/api/Products").then((value) => {
+            //     setAdminProducts(value.data)
+            // }).catch((error) => {
+            //     console.log(error)
+            // })
         }).catch((error) => {
             console.log(error)
         })
@@ -64,10 +71,18 @@ const AdminProducts = () => {
                         })
                     }
                     }
-                    deleteonClick={() => deleteProduct(a["productId"])}
+                    deleteonClick={() => setPopup({ id: a["productId"], show: true })
+                        // deleteProduct(a["productId"])
+                    }
                 />
             )
             }
+            {popup.show && <PopupScreen
+            messsage="Do you want delete product"
+            closeOnClick={() => setPopup({ id: 0, show: false })} isYesOrNo={true} yesOnClick={() => {
+                deleteProduct(popup.id)
+                setPopup({ id: 0, show: false })
+            }} noOnclick={() => setPopup({ id: 0, show: false })} />}
         </div>
     )
 }

@@ -1,5 +1,6 @@
 .popup_screen {
     position: relative;
+    max-height: 300px;
     width: 200px;
     height: auto;
     border-radius: 10px;
@@ -24,7 +25,7 @@
 .popup_content {
     position: relative;
     /* top: 20px; */
-    background-color: yellow;
+    color:black;
 }
 
 .popup_btn_con {
