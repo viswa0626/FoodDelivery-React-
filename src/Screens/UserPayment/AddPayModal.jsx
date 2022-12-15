@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import {Navigate} from 'react-router-dom';
 import { Button, Card, CardBody, Col, Container, Form, Input, InputGroup, Row } from 'reactstrap';
     
 export class AddPayModal extends React.Component {
   constructor() {
 
     super();
+    let paid = false
     this.state = {
       name: '',
       cardNo: '',
@@ -69,10 +71,11 @@ export class AddPayModal extends React.Component {
     {     
             alert('Successfully Added')
             //this.props.history.push("/Payment");
+            this.setState({paid:true});
     }
   }).catch(function(error){
     console.log(error)
-    alert('failed')
+    alert('Invalid Details')
   })
 }
 
@@ -90,6 +93,9 @@ export class AddPayModal extends React.Component {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
   };
+  if(this.setState.paid){
+    return <Navigate to="/Payment"/>
+  }
     return (
 
       <div className="app flex-row align-items-center"  style={myStyle}>
@@ -130,22 +136,22 @@ export class AddPayModal extends React.Component {
 
                     <InputGroup className="mb-3">
 
-                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
+                      <Input type="Number" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.cardNo} placeholder="Enter Card No" bssize="50px" />
 
                     </InputGroup>
                     <InputGroup className="mb-3">
 
-                      <Input type="text" required="required" style={{fontSize:"18px", marginTop:"20px"}}
+                      <Input type="Date"  style={{fontSize:"22px",blockSize:"35px", marginTop:"20px"}}
 
-                      onChange={this.expiryDate} placeholder="Enter Expiry Date" />
+                      onChange={this.expiryDate} placeholder="Enter Expiry Date"  />
 
                     </InputGroup>
 
                     <InputGroup className="mb-3">
 
-                      <Input type="password" required="required" style={{fontSize:"18px", marginTop:"20px"}}
+                      <Input type="password" required="required" maxLength={3} style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.cvvNo} placeholder="Enter CVV No" />
 
@@ -185,7 +191,9 @@ export class AddPayModal extends React.Component {
 
         <div style={{backgroundColor: "white", width: "50px", marginLeft: "20px", marginTop: "170px"}}>
 
-        <a href='./UserCart'>Back</a>
+        {/* <a href='./UserCart'>Back</a> */}
+
+        <a href='./userHome' style={{marginRight:'30px' ,fontSize:"20px", }}>Back</a>
 
         </div>
 

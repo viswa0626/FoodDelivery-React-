@@ -69,7 +69,7 @@ export class Payment extends Component {
 
                 </Table>
 
-                <a href='./userHome' style={{marginRight:'10px'}}>Back</a>
+                <a href='./userHome' style={{marginRight:'30px' ,size:"40px", fontSize:"20px", marginLeft:"650px",color:"white"}}>Back</a>
 
             </div>
         )

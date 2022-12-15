@@ -10,6 +10,7 @@ import PopupScreen from "./Components/Popup/PopupScreen";
 import AdminLogin from "./Screens/AdminLogin/AdminLogin";
 import EditProduct from "./Screens/adminAddProduct/EditProduct";
 import { AddPayModal } from "./Screens/UserPayment/AddPayModal";
+import {Payment} from "./Screens/UserPayment/Payment";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
       <Route path='/Starter' element={<Starter/>} exact />
       <Route path='/AddPayModal' element={<AddPayModal/>} exact />
       <Route path='/Payment' element={<Payment/>} exact /> */}
+      <Route path='/Payment' element={<Payment/>} exact />
+
       </Routes>
     </BrowserRouter>
   );

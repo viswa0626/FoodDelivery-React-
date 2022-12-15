@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Userhome from '../userHome/Userhome'
 import { Route, Link, useNavigate } from "react-router-dom";
 import Popup from 'reactjs-popup';
+import axios from 'axios';
 import "../userLogin/Login.css"
 
 
@@ -10,7 +11,7 @@ const AdminLogin = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    function navigateToAdmin(){
+    function navigateToAdmin() {
         navigate("/admin")
     }
 
@@ -21,13 +22,42 @@ const AdminLogin = () => {
         setPassword(a)
     }
 
-    function submitForm(event) {
+    async function submitForm(event) {
         event.preventDefault();
         console.log(email);
         console.log(password);
         setEmail("");
         setPassword("");
-        navigateToAdmin();
+        try {
+
+
+            var response =
+                await axios.put(`https://localhost:44364/api/Users/${email.toString().trim()}`, {
+                    email: email.toString().trim(),
+                    password: password.toString().trim(),
+                })
+            console.log(response);
+            console.log(response.status);
+            if (response.status === 200) {
+
+                setEmail("");
+                setPassword("");
+                // navigateToAdmin();
+                navigate("/admin");
+
+            }
+            else if (response.status === 204) {
+                alert('Password Incorrect')
+                // console.log("Password Incorrect");
+
+            }
+            else {
+                // console.log("Something went wrong! Please try again")
+                alert('Something went wrong! Please try again')
+            }
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     return (
@@ -51,8 +81,8 @@ const AdminLogin = () => {
                         <button className='button'>
                             {/* <Link to='/home'>Submit</Link> */}
                             {/* <Link to='/admin'> */}
-                                Submit
-                                {/* </Link> */}
+                            Submit
+                            {/* </Link> */}
                         </button>
 
                     </form>
@@ -73,4 +103,4 @@ const AdminLogin = () => {
     )
 }
 
-export default AdminLogin
+export default AdminLogin;
