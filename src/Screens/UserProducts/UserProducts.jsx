@@ -14,6 +14,7 @@ const UserProducts = () => {
 
     useEffect(() => {
         axios.get("https://localhost:44364/api/Products").then((value) => {
+            console.log(value.data)
             setUserProducts(value.data)
         }).catch((error) => {
             console.log(error)
@@ -37,7 +38,9 @@ const UserProducts = () => {
                                 "name": productItem['name'],
                                 "productImage": productItem['productImage'],
                                 "price": productItem['price'],
-                                "quantity": 1
+                                "quantity": 1,
+                                "productDes":productItem['productDescription']
+
                             }
                         )
                     }}

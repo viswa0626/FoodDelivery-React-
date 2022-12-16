@@ -151,7 +151,7 @@ export class AddPayModal extends React.Component {
 
                     <InputGroup className="mb-3">
 
-                      <Input type="password" required="required" maxLength={3} style={{fontSize:"18px", marginTop:"20px"}}
+                      <Input type="password" required="required" style={{fontSize:"18px", marginTop:"20px"}}
 
                       onChange={this.cvvNo} placeholder="Enter CVV No" />
 

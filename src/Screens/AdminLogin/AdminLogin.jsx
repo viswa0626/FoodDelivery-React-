@@ -32,7 +32,7 @@ const AdminLogin = () => {
 
 
             var response =
-                await axios.put(`https://localhost:44364/api/Users/${email.toString().trim()}`, {
+                await axios.put(`https://localhost:44364/api/Owner/${email.toString().trim()}`, {
                     email: email.toString().trim(),
                     password: password.toString().trim(),
                 })

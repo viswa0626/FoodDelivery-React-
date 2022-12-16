@@ -1,10 +1,10 @@
 .aml_products{
     margin:20px auto;
-    width:80%;
+    width:100%;
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
-    background-color: orange;
+    /* background-color: orange; */
     border-radius: 5px;
     overflow: hidden;
     overflow-y: scroll;

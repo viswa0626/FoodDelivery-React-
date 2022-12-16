@@ -6,7 +6,7 @@ const UserProCard = (props) => {
     return (
         <div className="aml_cards">
             <div className="aml_image_box">
-                <img src={props.img} alt="Image" />
+                <img className='aml_image_box' src={props.img} alt="Image" />
             </div>
             <div className="aml_details">
                 <p>{props.name}</p>
